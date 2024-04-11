@@ -2,7 +2,6 @@ import { Group, Burger, Text } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import classes from "./Header.module.css";
 import { UserMenu } from "./UserMenu";
-import { LanguageSelector } from "./LanguageSelector";
 
 const links = [
   { link: "/about", label: "Rhymes" },
@@ -37,12 +36,11 @@ export function Header() {
             interlud.es
           </Text>
 
-          <Group ml={20} gap={5} className={classes.links} visibleFrom="sm">
+          <Group ml={20} gap={5} visibleFrom="sm">
             {items}
           </Group>
         </Group>
 
-        <LanguageSelector />
         <UserMenu />
       </div>
     </header>

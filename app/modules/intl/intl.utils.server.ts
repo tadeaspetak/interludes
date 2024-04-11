@@ -1,9 +1,10 @@
 import { createCookie } from "@remix-run/node";
 
-import { type Locale, isLocale } from "~/modules/intl/intl.setup";
+import { type Locale } from "~/modules/intl/intl.setup";
 
 import { getCookieHeader } from "~/modules/cookies.utils.server";
 import { i18NextServer } from "./intl.server";
+import { isLocale } from "./intl.utils";
 
 // the cookie for saving explicit changes to the locale
 const intlPrefsCookie = createCookie("intl-prefs", {

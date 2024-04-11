@@ -3,7 +3,7 @@ import {
   type LoaderFunctionArgs,
   type MetaFunction,
 } from "@remix-run/node";
-import { Header } from "components/Header";
+import { Header } from "~/components/Header";
 import { useTranslation } from "react-i18next";
 import { i18NextServer } from "~/modules/intl/intl.server";
 import { localeFromRequest } from "~/modules/intl/intl.utils.server";

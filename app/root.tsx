@@ -31,7 +31,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang={locale}
-      dir={i18n.dir()} // https://github.com/mantinedev/mantine/issues/5253
+      dir={i18n.dir()}
+      // https://github.com/mantinedev/mantine/issues/5253
       data-mantine-color-scheme="light"
     >
       <head>

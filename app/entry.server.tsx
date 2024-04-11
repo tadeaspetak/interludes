@@ -33,10 +33,10 @@ export default async function handleRequest(
   const instance = createInstance();
 
   await instance
-    .use(initReactI18next) // Tell our instance to use react-i18next
-    .use(Backend) // Setup our backend
+    .use(initReactI18next)
+    .use(Backend)
     .init({
-      ...i18nSettings, // spread the configuration
+      ...i18nSettings,
       lng: await localeFromRequest(request),
       ns: i18NextServer.getRouteNamespaces(remixContext),
       backend: { loadPath: resolve("./public/locales/{{lng}}.json") },

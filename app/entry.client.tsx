@@ -16,7 +16,7 @@ async function hydrate() {
     .use(LanguageDetector)
     .use(Backend)
     .init({
-      ...i18nSettings, // spread the configuration
+      ...i18nSettings,
       ns: getInitialNamespaces(),
       backend: { loadPath: "/locales/{{lng}}.json" },
       detection: { order: ["htmlTag"], caches: [] },

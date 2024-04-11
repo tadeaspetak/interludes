@@ -34,3 +34,9 @@ Make sure to deploy the output of `npm run build`
 
 - `build/server`
 - `build/client`
+
+## Notes
+
+- [Set up your VS Code with Mantine](https://mantine.dev/getting-started/#set-up-vs-code).
+- If the css module imports are not working well for you, set the TS version properly as described [here](https://puruvj.dev/blog/css-modules-typescript-intellisense).
+- The `typescript-plugin-css-modules` plugin provides IDE support but not compilation support, so even when VS Code is happy, `tsc` is not. We use `typed-css-modules` in the `prelint:tsc` script to generate type defintions for CSS modules.

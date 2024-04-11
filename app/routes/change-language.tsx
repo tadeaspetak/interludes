@@ -4,9 +4,9 @@ import {
 } from "@remix-run/node";
 import { redirect } from "@remix-run/node";
 import { z } from "zod";
+import { localeValidator } from "~/modules/intl/intl.utils";
 
 import { localeToCookie } from "~/modules/intl/intl.utils.server";
-import { localeValidator } from "~/modules/intl/intl.setup";
 import { redirectBack } from "~/modules/routing/routing.redirect.server";
 
 const parser = z.object({ locale: localeValidator });
