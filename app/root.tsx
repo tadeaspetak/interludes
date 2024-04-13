@@ -15,8 +15,16 @@ import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import { useChangeLanguage } from "remix-i18next/react";
 import { useTranslation } from "react-i18next";
 import { localeFromRequest } from "./modules/intl/intl.utils.server";
+import { getPoemById } from "./modules/poem/poem.model.server";
+import { getSlonik } from "./db.server";
 
 export async function loader({ request }: LoaderFunctionArgs) {
+  const slonik = await getSlonik();
+  const poem = await getPoemById(
+    slonik,
+    "1183cacd-9d13-4bc5-bc3a-0e5bfeb2c02e"
+  );
+  console.log(poem);
   return json({ locale: await localeFromRequest(request) });
 }
 
